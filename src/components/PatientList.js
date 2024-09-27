@@ -1,11 +1,12 @@
 import React from "react"
 import Patient from './Patient'
 
-function PatientList({ patients }) {
+function PatientList({ patients, handleDeletePatient }) {
 
   const patientList = patients.map(patient => {
-    return <Patient key={patient.id} patient={patient} />
+    return <Patient key={patient.id} patient={patient} handleDeletePatient={handleDeletePatient} />
   })
+  // console.log(patients)
 
     return(
       <table>
